@@ -1,1 +1,30 @@
-
+import random
+def game():
+    print('Winning Combinations:\n 1. Rock beats Scissors (crushes them).\n2. Paper beats Rock (covers it).\n3. Scissors beats Paper (cuts it).')
+    while True:
+        user=input("enter rock or paper or scissors").lower()
+        choices=['rock','paper','scissors']
+        computer=random.choice(choices)
+        print('user: ',user)
+        print('computer: ',computer)
+        if user==computer:
+            print("tie")
+        elif user=='rock':
+          if computer=='paper':
+               print(" sorry!!paper coverd the rock")
+          else:
+              print(" Rock beats the scisssors ,YEAH YOU WON THE GAME")
+        elif user=='paper':
+            if computer=='scissors':
+                print(" sorry!! scisssors cuts the paper")
+            else:
+                print("paper covered the rock ,YEAH YOU WON THE GAME")
+        elif user=='scissors':
+            if computer=='paper':
+                print("scissors cuts th paper,YEAH YOU WON THE GAME")
+            else:
+                print("sorry!! rock beats the scissors")
+        play_again=input("if you want to continue yes/no:  ").lower()
+        if play_again!='yes':
+             break
+game()            
