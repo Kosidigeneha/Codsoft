@@ -1,1 +1,30 @@
-
+def calc():  
+    while True:
+        result=0
+        operation=""
+        if operation=="":
+            a=int(input('enter first value'))
+            result=a
+            operation=input('chose the operation(+,-,*,/)or quit q')
+            if operation.lower()=='q':
+                print(quit)
+                break
+            b=int(input('enter next value'))
+            if operation=='+':
+                result+=b
+            elif operation=='-':
+                result-=b           
+            elif operation =='*':
+                result*=b 
+            elif operation== "/" : 
+                if b!=0:
+                 result/=b
+                else:
+                    print('invalid')             
+            else:
+                print('quit')
+            print(result)
+        calculate=input('if you want to calcluate yes/no')
+        if calculate!='yes': 
+           break
+calc()  
